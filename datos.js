@@ -1,29 +1,29 @@
-const nombre = {
-    demand=true,
+const opciones ={
+    
+nombre : {
+    demand:true,
     alias: 'n'
-}
-const matematicas = {
+},
+ matematicas : {
 demand:true,
 alias: 'm'
-}
-const ingles = {
+},
+ ingles : {
 demand:true,
 alias: 'i'
-} 
-const programacion = {
+} ,
+ programacion : {
 demand:true,
 alias:'p'
 }
-
-let obtenerPromedio = (nota_uno, nota_dos, nota_3);
-
-const creacion = {
-nombre, matematicas, ingles, programacion
 }
 
+
 const argv = require('yargs')
-        .command('promedio' , 'crear un estudiante' , creacion)
+        .command('promedio' , 'crear un estudiante' , opciones)
         .argv;
+
+let obtenerPromedio = ((argv.matematicas+ argv.ingles+ argv.programacion)/3);
 
 module.exports = {
     obtenerPromedio,
